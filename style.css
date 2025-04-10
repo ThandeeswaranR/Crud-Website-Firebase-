@@ -1,0 +1,30 @@
+
+body {
+  background-color: #f0f2f5;
+}
+nav {
+  /* background-color: #0d6efd; */
+  background-color:rgb(255, 177, 33);
+
+  padding: 10px 20px;
+}
+.logo img {
+  height: 40px;
+}
+.view-btn {
+  background-color: black;
+  color: white;
+}
+.view-btn:hover {
+  background-color: #c3fcf2;
+}
+.container-box {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.table td, .table th {
+  vertical-align: middle;
+}
