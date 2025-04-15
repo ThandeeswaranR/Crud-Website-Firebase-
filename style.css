@@ -9,6 +9,10 @@ nav {
 
   padding: 10px 20px;
 }
+.Navbar{
+  position: sticky;
+  top: 0;
+}
 .logo img {
   height: 40px;
 }
