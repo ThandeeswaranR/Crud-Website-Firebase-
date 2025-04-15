@@ -9,6 +9,7 @@ let students = [];
     const Mobile = document.getElementById('Phone');
     const addButton = document.getElementById('add-btn');
     const studentList = document.getElementById('student-list');
+    
     function renderTable() {
       studentList.innerHTML = '';
       students.forEach((student, index) => {
@@ -29,6 +30,37 @@ let students = [];
         studentList.appendChild(row);
       });
     }
+
+
+    // function renderFilteredTable(dataArray) {
+    //   const datapushcall = document.getElementById("student-list");
+    //   datapushcall.innerHTML = "";
+    
+    //   if (dataArray.length === 0) {
+    //     datapushcall.innerHTML = `<tr><td colspan="9" class="text-center">No matching records found.</td></tr>`;
+    //     return;
+    //   }
+    
+    //   dataArray.forEach((data, index) => {
+    //     datapushcall.innerHTML += `
+    //       <tr>
+    //         <td>${index + 1}</td>
+    //         <td>${data.dbmyname}</td>
+    //         <td>${data.dbmybatch}</td>
+    //         <td>${data.dbmyBranch}</td>
+    //         <td>${data.dbmyCourse}</td>
+    //         <td>${data.dbmycurrentlypursuing}</td>
+    //         <td>${data.dbmyphonenumber}</td>
+    //         <td>${data.dbmycompany}</td>
+    //         <td>
+    //           <button class="btn btn-sm btn-warning editbutton" data-id="${data.id}">Edit</button>
+    //           <button class="btn btn-sm btn-danger deletebutton" data-id="${data.id}">Delete</button>
+    //         </td>
+    //       </tr>
+    //     `;
+    //   });
+    // }
+    
 
     function addStudent() {
       const name = nameInput.value.trim();
@@ -115,3 +147,7 @@ let students = [];
 //     para3.style.display ='block';
 
 // })
+
+
+
+// filter data

@@ -1,0 +1,32 @@
+onValue(collectionname, function (snapshot) {
+      const datapushcall = document.getElementById("student-list");
+      datapushcall.innerHTML = "";
+  
+      if (snapshot.exists()) {
+        const dbdatas = Object.entries(snapshot.val());
+        dbdatas.map((dd, index) => {
+          const id = dd[0];
+          const dbvalues = dd[1];
+          console.log(dbvalues);
+          
+  
+          datapushcall.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${dbvalues.dbmyname}</td>
+              <td>${dbvalues.dbmybatch}</td>
+              <td>${dbvalues.dbmyBranch}</td>
+              <td>${dbvalues.dbmyCourse}</td>
+              <td>${dbvalues.dbmycurrentlypursuing}</td>
+              <td>${dbvalues.dbmyphonenumber}</td>
+              <td>${dbvalues.dbmycompany}</td>
+              <td><button class="btn btn-sm btn-warning editbutton" data-id="${id}">Edit</button>
+                <button class="btn btn-sm btn-danger deletebutton" data-id="${id}">Delete</button>
+              </td>
+       
+            
+            </tr>`;
+        });
+      } else {
+        datapushcall.innerHTML = `<tr><td colspan="8" class="text-center">No Data in the Database</td></tr>`;
+      }
